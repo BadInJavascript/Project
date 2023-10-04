@@ -1,0 +1,51 @@
+.logo-container {
+    float: right; /* Place le logo à droite */
+    margin-top: 20px; /* Ajoute une marge en haut pour le positionner en dessous du texte */
+    margin-right: 20px; /* Ajoute une marge à droite pour l'éloigner du texte */
+}
+
+.logo {
+    width: 100px; /* Largeur du logo */
+    height: auto; /* Hauteur automatique pour conserver les proportions */
+}
+
+:root {
+    --primary-color : #000;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    padding: 1rem;
+}
+
+.signature-pad-form {
+    max-width: 300px;
+    margin:0 auto;
+}
+
+.signature-pad {
+    cursor:url(pen.png) 1 26, pointer;
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+}
+
+.clear-button {
+    color: var(--primary-color);
+}
+
+.submit-button {
+    width: 100%;
+    background-color: var(--primary-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    color : #FFF;
+    cursor:pointer;
+    margin-top: 2rem;
+}
+
+@media (pointer: coarse) {
+    body {
+        overflow:hidden;
+    }
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulaire PDF</title>
+   <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+ 
+
+
+   
+</head>
+<body>
+    <form action="/generate-pdf" method="post" id="pdfForm">
+        <div id="content">
+            <form id="monFormulaire" class="signature-pad-form">
+                <!-- Vos champs de formulaire ici -->
+
+                <div class="header-band">
+                    <div class="logo-container">
+                         <img src="logo.png" alt="Logo" class="logo">
+                    </div>
+                    <div>Carrières</div>
+                    <div class="subtext">PARIS</div>
+                   
+                </div>
+                <h1>ATTESTATION DE PROPRETE</h1>
+
+                <label for="transporteur">Transporteur :</label>
+                <input type="text" id="transporteur" name="transporteur" required><br>
+
+                <label for="immatriculation">N° d'immatriculation :</label>
+                <input type="text" id="immatriculation" name="immatriculation" required><br>
+
+                <label for="client">Nom du client :</label>
+                <input type="text" id="client" name="client" required><br>
+
+                <label>Type de citerne :</label>
+                <input type="radio" id="citernePlate" name="citerneType" value="Citerne Plate">
+                <label for="citernePlate">Citerne Plate</label><br>
+
+                <input type="radio" id="camionBenne" name="citerneType" value="Camion Benne">
+                <label for="camionBenne">Camion Benne</label><br>
+
+                <input type="radio" id="basculante" name="citerneType" value="Basculante">
+                <label for="basculante">Basculante</label><br>
+
+                <label for="dateNettoyage">Date et heure du dernier nettoyage :</label>
+        <input type="datetime-local" id="dateNettoyage" name="dateNettoyage" required><br>
+
+        <label>Procédé utilisé :</label>
+<div>
+    <input type="radio" id="procedeA" name="procede" value="A">
+    <label for="procedeA">A (nettoyage à sec: brosse, air comprimé)</label><br>
+    
+    <input type="radio" id="procedeB" name="procede" value="B">
+    <label for="procedeB">B (nettoyage à l'eau)</label><br>
+    
+    <input type="radio" id="procedeC" name="procede" value="C">
+    <label for="procedeC">C (nettoyage à l'eau et détergent)</label><br>
+    
+    <input type="radio" id="procedeD" name="procede" value="D">
+    <label for="procedeD">D (nettoyage à l'eau, détergent et désinfectant)</label><br>
+</div>
+
+                <label>Nettoyage des vannes de déchargement ?</label>
+                <input type="radio" id="nettoyageVannesOui" name="nettoyageVannes" value="Oui">
+                <label for="nettoyageVannesOui">Oui</label>
+
+                <input type="radio" id="nettoyageVannesNon" name="nettoyageVannes" value="Non">
+                <label for="nettoyageVannesNon">Non</label><br>
+
+                <label>Nettoyage des flexibles de déchargement ?</label>
+                <input type="radio" id="nettoyageFlexiblesOui" name="nettoyageFlexibles" value="Oui">
+                <label for="nettoyageFlexiblesOui">Oui</label>
+
+                <input type="radio" id="nettoyageFlexiblesNon" name="nettoyageFlexibles" value="Non">
+                <label for="nettoyageFlexiblesNon">Non</label><br>
+
+                <label for="materiauTransporte">Matériau transporté avant dernier nettoyage :</label>
+                <div>
+                    <input type="radio" id="PF011" name="materiauTransporte" value="PF011">
+                    <label for="PF011">PF011</label><br>
+
+                    <input type="radio" id="PF310PA" name="materiauTransporte" value="PF310PA">
+                    <label for="PF310PA">PF310PA</label><br>
+
+                    <input type="radio" id="PF310A" name="materiauTransporte" value="PF310A">
+                    <label for="PF310A">PF310A</label><br>
+
+                    <input type="radio" id="PF1300A" name="materiauTransporte" value="PF1300A">
+                    <label for="PF1300A">PF1300A</label><br>
+
+                    <input type="radio" id="PFASPI" name="materiauTransporte" value="PF ASPI">
+                    <label for="PFASPI">PF ASPI</label><br>
+
+                    <input type="radio" id="SA2100A" name="materiauTransporte" value="SA2100A">
+                    <label for="SA2100A">SA2100A</label><br>
+
+                    <input type="radio" id="G24" name="materiauTransporte" value="G24">
+                    <label for="G24">G24</label><br>
+
+                    <input type="radio" id="autreFournisseur" name="materiauTransporte" value="Autre Fournisseur">
+                    <label for="autreFournisseur">Autre fournisseur :</label>
+                    <input type="text" id="autreFournisseurText" name="autreFournisseurText" style="display: none;">
+                </div>
+
+                <label>Granulométrie enlevée à la carrière:</label>
+                <div>
+                    <input type="radio" id="granulometriePF011" name="granulometrie" value="PF011">
+                    <label for="granulometriePF011">PF011</label><br>
+
+                    <input type="radio" id="granulometriePF310PA" name="granulometrie" value="PF310PA">
+                    <label for="granulometriePF310PA">PF310PA</label><br>
+
+                    <input type="radio" id="granulometriePF310A" name="granulometrie" value="PF310A">
+                    <label for="granulometriePF310A">PF310A</label><br>
+
+                    <input type="radio" id="granulometriePF1300A" name="granulometrie" value="PF1300A">
+                    <label for="granulometriePF1300A">PF1300A</label><br>
+
+                    <input type="radio" id="granulometriePFASPI" name="granulometrie" value="PF ASPI">
+                    <label for="granulometriePFASPI">PF ASPI</label><br>
+
+                    <input type="radio" id="granulometrieSA2100A" name="granulometrie" value="SA2100A">
+                    <label for="granulometrieSA2100A">SA2100A</label><br>
+
+                    <input type="radio" id="granulometrieG24" name="granulometrie" value="G24">
+                    <label for="granulometrieG24">G24</label><br>
+                </div>
+<label for="attestationTransporteur">Attestation du transporteur:</label>
+<div>
+    <label for="transporteurNom">Je soussigné(e) </label>
+    <input type="text" id="transporteurNom" name="transporteurNom" required>
+    <label for="transporteurRepresentant"> représentant les transports </label>
+    <input type="text" id="transporteurRepresentant" name="transporteurRepresentant" required>
+    <label for="transporteurDate"> certifie que les renseignements portés ci-dessus sont exacts, et engage ma responsabilité en cas de pollution, au cours du transport, des matériaux enlevés à la carrière.</label>
+    <br>
+    <label for="transporteurDateRinxent">A Paris, le </label>
+    <input type="date" id="transporteurDateRinxent" name="transporteurDateRinxent" required>
+</div>
+
+<canvas id="signatureCanvas" height="100" width="300" class="signature-pad"></canvas>
+<input type="hidden" name="signatureImageURL" id="signatureImageURL">
+
+<p>
+    <a href="#" id="clearSignatureButton" class="clear-button">Clear</a>
+</p>
+<script src="signature.js"></script>
+
+   
+
+
+                <label for="pdfName">Nom du fichier PDF :</label>
+                <input type="text" id="pdfName" name="pdfName" required><br><br>
+                <button type="submit">Générer PDF</button>
+            </form>
+
+            
+        </div>
+    </form>
+
+    <a id="downloadLink" style="display: none;"></a>
+    <button id="downloadButton" style="display: none;">Télécharger le PDF</button>
+
+    
+
+
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var autreFournisseurRadio = document.getElementById("autreFournisseur");
+            var autreFournisseurText = document.getElementById("autreFournisseurText");
+
+            autreFournisseurRadio.addEventListener("change", function () {
+                if (autreFournisseurRadio.checked) {
+                    autreFournisseurText.style.display = "block";
+                } else {
+                    autreFournisseurText.style.display = "none";
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>
